@@ -2,6 +2,10 @@
 namespace AMD
 {
 class CmdParser;
+class DeviceManager;
+class SysMonitor;
+class GpuMonitor;
+
 class SettingManager
 {
 public:
@@ -9,7 +13,10 @@ public:
     ~SettingManager(){ }
     int Run();
 private:
-    CmdParser* m_pParser;
+    CmdParser*      m_pCmdParser;
+    DeviceManager*  m_pDeviceMgr;
+    SysMonitor*     m_pSysMonitor;
+    GpuMonitor*     m_pGpuMonitor;
 };
 
 }
